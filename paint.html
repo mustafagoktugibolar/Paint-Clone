@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Paint Clone</title>
+</head>
+<body>
+    <h1>Paint Your Own Picture</h1>
+    <p>Set width <input type="text" onchange="setWidth(this.value)">  Set height <input type="text" onchange="setHeight(this.value)"></p>
+
+    <canvas id="canvas1" onmousedown="startPaint()" 
+        onmousemove="doPaint(event.offsetX, event.offsetY)" 
+        onmouseup="endPaint()">
+          
+    </canvas>
+    <p>
+        Brush color <input type="color" value="#000"      onchange="setColor(this.value)"> 
+        Brush size: <input id="sizeInput" type="range" min=1  max=50 value=10 oninput="resizeBrush(this.value)">
+        <output id="sizeOutput">10</output>
+    </p>
+    <p>
+        <input type="button" id="clear" value="Clear Canvas" onclick="clearCanvas()">
+    </p>
+    <script src="script.js"></script>
+</body>
+</html>

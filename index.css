@@ -1,0 +1,15 @@
+h1 {
+    color: gray;
+  }
+  
+  canvas{
+    border: 1px solid lightgray;
+  }
+  
+  #sizeOutput {
+    margin-left: 5px;
+  }
+  
+  #clear {
+    font-size: 15px;
+  }
